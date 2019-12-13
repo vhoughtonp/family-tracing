@@ -5,7 +5,7 @@
 
 // Import colour palette and applied colours so that we can use
 // $govuk-body-background-colour in our overrides below.
-// 
+//
 // If you need to enable compatibility mode or the legacy palette, do that
 // *before* these imports.
 @import "node_modules/govuk-frontend/govuk/settings/colours-palette";
@@ -22,3 +22,17 @@ $govuk-font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", san
 $govuk-canvas-background-colour: $govuk-body-background-colour;
 
 @import "node_modules/govuk-frontend/govuk/all";
+/*small*/
+@media (max-width: 740px) {
+    #redcross-logo {
+      width: 40%;
+    }
+}
+
+
+/*desktop*/
+@media (min-width: 741px) {
+    #redcross-logo {
+      width: 60%;
+    }
+}
