@@ -1,0 +1,41 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+
+  <h1 class="govuk-heading-xl">Trace the Face</h1>
+
+
+  {% if data['online_data_permission']=="yes,no" and data['in_person_data_permission']=="no"
+  and data['age']=="over-18"  %}
+    <h1 class="govuk-heading-xl">Trace the Face (online)</h1>
+  {% endif %}
+
+  {% if data['online_data_permission']=="yes,no" and data['in_person_data_permission']=="yes,no" and data['relationship']=="legal_professional"  %}
+    <h1 class="govuk-heading-xl">Trace the Face (online) legal</h1>
+  {% endif %}
+
+  {% if data['online_data_permission']=="no"
+  and data['in_person_data_permission']=="yes,no" %}
+    <h1 class="govuk-heading-xl">Active Trace</h1>
+  {% endif %}
+
+  {% if data['in_person_data_permission']=="no"
+  and data['online_data_permission']=="no"
+  and data['age']=="under-18" %}
+    <h1 class="govuk-heading-xl">Trace the Face (offline)</h1>
+  {% endif %}
+
+  {% if data['in_person_data_permission']=="no"
+  and data['online_data_permission']=="no" %}
+    <h1 class="govuk-heading-xl">Trace the Face (offline)</h1>
+  {% endif %}
+
+
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/age" method="post">
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+        Which country should we start looking in
+      </h1>
+    </legend>
+    <span id="sign-in-hint" class="govuk-hint">
+      We are only able to offer land searches when we have a rough idea which country to look in.
+    </span>
+    <div class="govuk-form-group">
+<label class="govuk-label" for="sort">
+  Select country
+</label>
+<select class="govuk-select" id="sort" name="sort">
+  <option value="published" selected>Afghanistan</option>
+  <option value="updated" >UK</option>
+  <option value="views">Iran</option>
+  <option value="comments">Eritrea</option>
+  <option value="comments">Sudan</option>
+  <option value="comments">Libya</option>
+    <option value="comments">I don't know</option>
+</select>
+</div>
+  </fieldset>
+</div>
+
+              <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

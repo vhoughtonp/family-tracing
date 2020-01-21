@@ -1,0 +1,38 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <a href="/relationship" class="govuk-back-link">Back</a>
+      <h1 class="govuk-heading-xl">We cannot provide tracing evidence for legal cases.</h1>
+
+      <p> We cannot accept referrals from legal professionals who intend to use tracing as evidence in a legal case,such as an asylum claim. </p>
+      <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+      Why can't the Red Cross support legal cases?
+      </span>
+      </summary>
+      <div class="govuk-details__text">
+      <p>The British Red Cross is an autonomous humanitarian organisation, one of whose traditional aims is helping to restore contact between members of families separated by conflict or disaster. To this end, the British Red Cross provides an International Family Tracing service (IFT). While the British Red Cross will always use its best endeavours to restore family contact, we cannot be involved in any legal or other official proceedings, for example, those aimed at resolving immigration or asylum status.</p>
+      <p>Nor does the British Red Cross wish to see its humanitarian endeavours and any relevant findings relied on in such official proceedings (for example, by being afforded any official status or evidentiary weight), whether by individuals or government organisations, as this compromises our fundamental principle of neutrality.</p>
+      <p>Therefore, due to the increasingly large number of people using the IFT service with the aim of supporting their legal cases, the British Red Cross will no longer accept these enquiries.</p>
+      </div>
+      </details>
+      <div>
+        <p>
+      If your client is still looking for their family, they can search online at Trace the Face - an international directory of people looking for their family.
+</p>
+    </div>
+
+<button class="govuk-button" data-module="govuk-button" onclick=window.location.href="https://familylinks.icrc.org/europe/en/Pages/search-persons.aspx">Trace the Face</button>
+
+    </div>
+  </div>
+
+{% endblock %}
