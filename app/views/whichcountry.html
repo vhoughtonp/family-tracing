@@ -8,35 +8,49 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
+<a href="/criteria" class="govuk-back-link">Back</a>
     <form class="form" action="/age" method="post">
 
       <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+  <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
       <h1 class="govuk-fieldset__heading">
-        Which country should we start looking in
+Is there a country we should start our search in?
       </h1>
     </legend>
-    <span id="sign-in-hint" class="govuk-hint">
-      We are only able to offer land searches when we have a rough idea which country to look in.
-    </span>
-    <div class="govuk-form-group">
-<label class="govuk-label" for="sort">
-  Select country
-</label>
-<select class="govuk-select" id="sort" name="sort">
-  <option value="published" selected>Afghanistan</option>
-  <option value="updated" >UK</option>
-  <option value="views">Iran</option>
-  <option value="comments">Eritrea</option>
-  <option value="comments">Sudan</option>
-  <option value="comments">Libya</option>
-    <option value="comments">I don't know</option>
-</select>
+    <span id="citizenship-conditional-hint" class="govuk-hint">
+We can only start a search in one country, which country should we look for your missing relative in?    </span>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+Select a country
+
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">Afghanistan</option>
+    <option value="updated" selected>Belarus</option>
+    <option value="views">Bulgaria</option>
+    <option value="comments">Sudan</option>
+  </select>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+          I'm not sure
+        </label>
+      </div>
+      </div>
+    </div>
 </div>
-  </fieldset>
-</div>
+
 
               <button class="govuk-button" data-module="govuk-button">Continue</button>
 
