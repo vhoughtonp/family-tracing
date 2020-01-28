@@ -6,84 +6,70 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-width-container">
 <a href="/age" class="govuk-back-link">Back</a>
+<main class="govuk-main-wrapper">
       <form class="form" action="/evidence" method="post">
 
+          <div class=govuk-grid-column-two-thirds>
         <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
       <h1 class="govuk-fieldset__heading">
-        Can we share details of your search?
+        Would you be worried if we visited your home country to look for your family?
       </h1>
     </legend>
     <span id="nationality-hint" class="govuk-hint">
-      There may be risks with publicly searching for your family. Select the options that are safe for you and your family.
+      If you lost your family under dangerous circumstances, or if they are currently in hiding, then let us know.
     </span>
-    <div class="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="nationality" name="online_data_permission" type="checkbox" value="yes" aria-describedby="nationality-item-hint">
-        <label class="govuk-label govuk-checkboxes__label" for="nationality">
-          Online
+
+
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="tracing" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+          Yes
         </label>
-        <input type="hidden" name="online_data_permission" value="no">
-        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-          Such as on Trace the Face or social media.
+        <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          A public search could put me or my family in danger.
         </span>
       </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="nationality-2" name="government_data_permission" type="checkbox" value="yes">
-        <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
-          With government officials
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="reunion" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+          No
         </label>
-        <input type="hidden" name="government_data_permission" value="no">
-        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-          In the UK or internationally
+        <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+You can search for my family in public.
         </span>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="nationality-3" name="in_person_data_permission" type="checkbox" value="yes">
-        <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
-          In-person at your family's last known address
-        </label>
-        <input type="hidden" name="in_person_data_permission" value="no">
-        <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-          Uniformed volunteers search for your family by asking locals questions and directions.
-        </span>
-      </div>
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            How the Red Cross shares information during a trace
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body govuk-!-margin-bottom-5">To find your family we need to take information from you about your family, such as their names, ages, and possible location. Depending on your preferences, we then use this information to:
-          </p>
-          <ul class="govuk-list">
-          <li>
-          <a class="govuk-link">• Search for your family online</a>
-          </li>
-          <li>
-          <a class="govuk-link">• Check government databases in the UK and abroad</a>
-          </li>
-          <li class="govuk-body govuk-!-margin-bottom-5">
-          <a class="govuk-link">• Send uniformed Red Cross volunteers to locations where your family might be</a>
-          </li>
-          </ul>
-          <p class="govuk-body govuk-!-margin-bottom-5"> If you lost contact with your family under dangerous circumstances, sharing your information in this way could put you, or your family in danger. We will only offer you services you feel are safe.
-            </p>
-        </div>
-      </details>
+
     </div>
   </fieldset>
 </div>
+<div>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+Why would I be worried?          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body govuk-!-margin-bottom-5">
+            Some clients have lost contact with their families under dangerous circumstances. They worry that publicly searching for their family could put them at risk. </p>
+            <p>We will only offer you services you are comfortable with.
+              </p>
+              <img src="/public/images/activetrace.png" alt="A uniformed red cross volunteer searching for family in a rural village">
+              <p>Here is a picture of a uniformed red cross volunteer, publicly searching in a public village. We will only offer a service like this if you feel comfortable with it.
+                </p>
+
+        </div>
+      </details>
                 <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>
+</div>
 
-    </div>
+    </main>
   </div>
 
 {% endblock %}

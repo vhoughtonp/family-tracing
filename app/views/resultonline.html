@@ -1,0 +1,44 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+        Search for your family online
+          </h1>
+        </div>
+        <p class="govuk-body">The British Red Cross has a database called <a href="https://familylinks.icrc.org/europe/en/Pages/Home.aspx"> Trace the Face</a>. It has the the names and faces of people across the world who are looking for their families.</p>
+          <h4 class="govuk-heading-s">This service is best for people who:</h4>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>don't know which country to look in</li>
+            <li>or have safety concerns.</li>
+            <li> are over 18 </li>
+          </ul>
+
+          <h4 class="govuk-heading-s">Registration is easy, you will need:</h4>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Your name and contact details</li>
+            <li>The name of your missing relative</li>
+            <li>A photo of your face</li>
+          </ul>
+          <p class="govuk-body">We will check for your consent, and send you confirmation email that you have started your trace. You can use this to support an asylum claim.</p>
+
+          <button class="govuk-button" data-module="govuk-button">Register</button>
+  </main>
+</div>
+
+
+
+
+{% endblock %}

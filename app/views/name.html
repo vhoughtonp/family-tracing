@@ -1,0 +1,132 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<a href="/whichcountry" class="govuk-back-link">Back</a>
+      <form class="form" action="/data-permissions" method="post">
+        <h1 class="govuk-heading-xl">Tell us about yourself</h1>
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="names">
+First name
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="Surname">
+Surname
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+              </div>
+
+            </fieldset>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <div class="govuk-form-group">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                      <p class="govuk-body govuk-!-margin-bottom-7">
+                        </p>
+
+                        <label class="govuk-label" for="address-town">
+<strong> How should we contact you? </strong>
+                        </label>
+
+                    </legend>
+
+                    </div>
+
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
+                    <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+Email
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-email">
+                        Email address
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false">
+                    </div>
+
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+                    <label class="govuk-label govuk-checkboxes__label" for="Phone">
+Phone or Text message
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-phone">
+                        Mobile number
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel">
+                    </div>
+
+                  </div>
+
+
+
+                  </div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <div class="govuk-form-group">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <p class="govuk-body govuk-!-margin-bottom-7">
+                          </p>
+
+                          <label class="govuk-label" for="address-town">
+                        <strong> Will you need an interpreter? </strong>
+                          </label>
+                      </legend>
+
+                      </div>
+
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
+                      <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+Yes, I will need an interpreter</label>
+                    </div>
+                    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="sort">
+                  Select a language
+                        </label>
+                        <select class="govuk-select" id="sort" name="sort">
+                          <option value="published">English</option>
+                          <option value="updated" selected>Kurdish</option>
+                          <option value="views">Farsi</option>
+                          <option value="comments">Sudanese</option>
+                        </select>
+                </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+            No, I can speak english confidently.
+            </label>
+            </div>
+            <p class="govuk-body govuk-!-margin-bottom-6">
+              </p>
+        </div>
+                <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
