@@ -6,70 +6,70 @@
 
 {% block content %}
 
-  <div class="govuk-width-container">
-<a href="/age" class="govuk-back-link">Back</a>
-<main class="govuk-main-wrapper">
-      <form class="form" action="/evidence" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<a href="/whichcountry" class="govuk-back-link">Back</a>
+      <form class="form" action="/age" method="post">
 
-          <div class=govuk-grid-column-two-thirds>
         <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-      <h1 class="govuk-fieldset__heading">
-        Would you be worried if we visited your home country to look for your family?
-      </h1>
-    </legend>
-    <span id="nationality-hint" class="govuk-hint">
-      If you lost your family under dangerous circumstances, or if they are currently in hiding, then let us know.
-    </span>
+          <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+Are you or your family in hiding?
+              </h1>
+            </legend>
+            <span id="sign-in-hint" class="govuk-hint">
+            </span>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="tracing" aria-describedby="sign-in-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+Yes                </label>
+                <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+Sharing personal information about me, my family or my search could be dangerous.                </span>
+              </div>
 
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="reunion" aria-describedby="sign-in-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+No                </label>
+                <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  You can search for my family members in public.
+                </span>
+              </div>
+            </div>
+          </fieldset>
 
-    <div class="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="tracing" aria-describedby="sign-in-item-hint">
-        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
-          Yes
-        </label>
-        <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-          A public search could put me or my family in danger.
-        </span>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="reunion" aria-describedby="sign-in-item-hint">
-        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
-          No
-        </label>
-        <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-You can search for my family in public.
-        </span>
-
-    </div>
-  </fieldset>
-</div>
-<div>
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-Why would I be worried?          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body govuk-!-margin-bottom-5">
-            Some clients have lost contact with their families under dangerous circumstances. They worry that publicly searching for their family could put them at risk. </p>
-            <p>We will only offer you services you are comfortable with.
-              </p>
-              <img src="/public/images/activetrace.png" alt="A uniformed red cross volunteer searching for family in a rural village">
-              <p>Here is a picture of a uniformed red cross volunteer, publicly searching in a public village. We will only offer a service like this if you feel comfortable with it.
+            <div>
+              <p class="govuk-body govuk-!-margin-bottom-5">
                 </p>
 
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+        Why are you asking this?          </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p class="govuk-body govuk-!-margin-bottom-5">
+                    Some clients have lost contact with their families under dangerous circumstances and are now in hiding. They worry that publicly searching for their family could put them at risk. </p>
+                    <p>We will only offer you services you are comfortable with.
+                      </p>
+                      <img src="/public/images/activetrace.png" alt="A uniformed red cross volunteer searching for family in a rural village">
+                      <p>Here is a picture of a uniformed red cross volunteer, publicly searching in a public village. We will only suggest a service like this if you feel safe.
+                        </p>
+                  </div>
         </div>
-      </details>
-                <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </div>
+    <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+    Continue
+    </button>
 
-      </form>
-</div>
+    <button action="/age" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    I'm not sure</button>
+      </div>
 
-    </main>
+
+    </div>
   </div>
 
 {% endblock %}
