@@ -5,106 +5,442 @@
 {% endblock %}
 
 {% block content %}
+{% if data['who_are_you']=="yes"%}
+<!-----------OFFLINE TTF----------------!>
 
-<div class="govuk-width-container">
-  <a href="#" class="govuk-back-link">Back</a>
-  <form class="form" action="/name" method="post">
+  {% if (data['country']=="not_sure" or data['risks']=="yes") and data['age']=="under-18" %}
 
+  <div class="govuk-width-container">
+    <a href="/age" class="govuk-back-link">Back</a>
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-panel__title">
+  You are eligible for an Offline Search          </h1>
+          <p class="govuk-body">Based on your answers, we advise you search for your family offline. This means adding your details to the Red Cross database of people across the world searching for their family.</p>
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Why this service is right for you </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <p class="govuk-body">An online tracing service is right for people who are:</p>
 
-  <main class="govuk-main-wrapper">
+                <ul class="govuk-list govuk-list--bullet">
+                  <li> under 18</li>
+                  <li> not sure where to start a search</li>
+                  <li> in hiding or at risk.</li>
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-panel govuk-panel--confirmation">
-          <h1 class="govuk-panel__title">
-        Search for your family online
-          </h1>
-        </div>
-        <p class="govuk-body">Based on your answers, we advise you register for our online family tracing service, called <a href="https://familylinks.icrc.org/europe/en/Pages/Home.aspx"> Trace the Face</a>.</p>
-        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-          <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-        Why this service is right for you </span>
-              </h2>
+                </ul>
+              </div>
             </div>
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-              <p class="govuk-body">An online tracing service is right for people who:</p>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+        How to get started       </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                <p class="govuk-body">Complete a short online registration form. You will need:</p>
 
-              <ul class="govuk-list govuk-list--bullet">
-                <li> are over 18 </li>
-                <li> don't know which country to look in</li>
-                <li> cannot safely open a public search.</li>
-
-              </ul>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Your name and contact details</li>
+                  <li>The name of your missing relative</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-      How to register       </span>
-              </h2>
-            </div>
-            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-              <p class="govuk-body">You will need to complete a short online registration form. You will need:</p>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          What happens once you've registered        </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                <p class="govuk-body">Once you complete the online enquiry form:</p>
 
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Your name and contact details</li>
-                <li>The name of your missing relative</li>
-                <li>A photo of your face</li>
-              </ul>
-            </div>
-          </div>
-          <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-        What happens once you've registered        </span>
-              </h2>
-            </div>
-            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-              <p class="govuk-body">Once you complete the online registration form:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>You will receive email confirmation of your enquiry</li>
+                  <li>You can start looking for your family online</li>
+                  <li><strong>We will </strong> add your details to the Red Cross international database so that your family can find you. </li>
+                </ul>
+              </div>
+  <div>
+    <form class="form" action="/TTFreferralform" method="post">
+   <button class="govuk-button" data-module="govuk-button">Register now</button>
+  </div>
 
-              <ul class="govuk-list govuk-list--bullet">
-                <li>You will receive email confirmation of your enquiry</li>
-                <li>You can start looking for your family online</li>
-                <li><strong>We will </strong> upload your photo online, so that your missing relative can start looking for you.</li>
-              </ul>
-            </div>
-  </main>
-<div>
- <button class="govuk-button" data-module="govuk-button">Register now</button>
-</div>
-
-
-  {% if data['online_data_permission']=="yes,no" and data['in_person_data_permission']=="no"
-  and data['age']=="over-18"  %}
-    <h1 class="govuk-heading-xl">Trace the Face (online)</h1>
   {% endif %}
 
-  {% if data['online_data_permission']=="yes,no" and data['in_person_data_permission']=="yes,no" and data['relationship']=="legal_professional"  %}
-    <h1 class="govuk-heading-xl">Trace the Face (online) legal</h1>
+<!---------ONLINE TTF-------------!>
+
+  {% if (data['country']=="not_sure" or data['risks']=="yes") and data['age']=="over-18" %}
+
+  <div class="govuk-width-container">
+    <a href="/age" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-panel__title">
+  You are eligible for an Online Search          </h1>
+          <p class="govuk-body">Based on your answers, we advise you register for our online family tracing service, called <a href="https://familylinks.icrc.org/europe/en/Pages/Home.aspx"> Trace the Face</a>.</p>
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Why this service is right for you </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <p class="govuk-body">An online tracing service is right for people who:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li> are over 18 </li>
+                  <li> don't know which country to look in</li>
+                  <li> are in hiding or would be at risk.</li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+        How to register       </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                <p class="govuk-body">Complete a short online registration form. You will need:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Your name and contact details</li>
+                  <li>The name of your missing relative</li>
+                  <li>A photo of your face</li>
+                </ul>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          What happens once you've registered        </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                <p class="govuk-body">Once you complete the online registration form:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>You will receive email confirmation of your enquiry</li>
+                  <li>You can start looking for your family online</li>
+                  <li><strong>We will </strong> upload your photo online, so that your missing relative can start looking for you.</li>
+                </ul>
+              </div>
+    </main>
+  <div>
+    <form class="form" action="/TTFreferralform" method="post">
+   <button class="govuk-button" data-module="govuk-button">Register now</button>
+  </div>
+
   {% endif %}
 
-  {% if data['online_data_permission']=="no"
-  and data['in_person_data_permission']=="yes,no" %}
-    <h1 class="govuk-heading-xl">Active Trace</h1>
+<!--------ACTIVE-----------!>
+
+  {% if data['country']=="selected" and data['risks']=="no" %}
+
+  <div class="govuk-width-container">
+    <a href="/age" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-panel__title">
+  You are eligible for an Active Search          </h1>
+          <p class="govuk-body">Based on your answers, we advise you register for an active trace, where we use online tools and international volunteers to find your family.</p>
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Why this service is right for you </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <p class="govuk-body">An online tracing service is right for people who:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li> know where to start the search</li>
+                  <li> aren't in hiding.</li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+        How to get started       </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                <p class="govuk-body">Complete a short online enquiry form. You will need:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Your name and contact details.</li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          What happens once you've registered        </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                <p class="govuk-body">Once you complete the online enquiry form:</p>
+
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>You will receive email confirmation of your enquiry</li>
+                  <li>You can start looking for your family online</li>
+                  <li><strong>We will </strong> contact you to book an appointment at a Red Cross centre near you.</li>
+                </ul>
+              </div>
+    </main>
+  <div>
+   <button class="govuk-button" data-module="govuk-button">Make an enquiry</button>
+  </div>
   {% endif %}
 
-  {% if data['in_person_data_permission']=="no"
-  and data['online_data_permission']=="no"
-  and data['age']=="under-18" %}
-    <h1 class="govuk-heading-xl">Trace the Face (offline)</h1>
-  {% endif %}
+    {% endif %}
 
-  {% if data['in_person_data_permission']=="no"
-  and data['online_data_permission']=="no" %}
-    <h1 class="govuk-heading-xl">Trace the Face (offline)</h1>
-  {% endif %}
+    {% if data['who_are_you']=="no"%}
+    <!-----------OFFLINE TTF----------------!>
 
+      {% if (data['country']=="not_sure" or data['risks']=="yes") and data['age']=="under-18" %}
 
+      <div class="govuk-width-container">
+        <a href="/age" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper">
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-panel__title">
+      You can register for an Offline Search          </h1>
+              <p class="govuk-body">Based on your answers, we can open an Offline Search. This means adding the enquirers details to the Red Cross database of people across the world searching for their family.</p>
+              <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Why we've offered this service </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <p class="govuk-body">An online tracing service is right for people who are:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li> under 18</li>
+                      <li> not sure where to start a search</li>
+                      <li> in hiding or at risk.</li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+            How to register       </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                    <p class="govuk-body">Complete a short online registration form. You will need:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>The referrers name and contact details</li>
+                      <li>The name and contact details of the person looking for their family</li>
+
+                      <li>The name of their missing relative</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+              What happens after registration     </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                    <p class="govuk-body">Once you complete the online registration form:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>You will receive email confirmation of your enquiry</li>
+                      <li>They can start looking for your family online</li>
+                      <li><strong>We will </strong> add the details to the Red Cross international database so their family can find them. </li>
+                    </ul>
+                  </div>
+        </main>
+      <div>
+        <form class="form" action="/TTFreferralform" method="post">
+       <button class="govuk-button" data-module="govuk-button">Register now</button>
+      </div>
+
+      {% endif %}
+
+    <!---------ONLINE TTF-------------!>
+
+      {% if (data['country']=="not_sure" or data['risks']=="yes") and data['age']=="over-18" %}
+
+      <div class="govuk-width-container">
+        <a href="/age" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper">
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-panel__title">
+      You are eligible for an Online Search          </h1>
+              <p class="govuk-body">Based on your answers, we advise you register for our online family tracing service, called <a href="https://familylinks.icrc.org/europe/en/Pages/Home.aspx"> Trace the Face</a>.</p>
+              <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Why we've offered this service</span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <p class="govuk-body">An online tracing service is right for people who:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li> are over 18 </li>
+                      <li> don't know which country to look in</li>
+                      <li> are in hiding or would be at risk.</li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+            How to register       </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                    <p class="govuk-body">Complete a short online registration form. You will need:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>Your name and contact details</li>
+                      <li>The name of your missing relative</li>
+                      <li>A photo of your face</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+              What happens after registration       </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                    <p class="govuk-body">Once you complete the online registration form:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>You will receive email confirmation of this enquiry</li>
+                      <li>They can start looking for your family online</li>
+                      <li><strong>We will </strong> upload their photo online, so that their missing relatives can find them.</li>
+                    </ul>
+                  </div>
+        </main>
+      <div>
+        <form class="form" action="/TTFreferralform" method="post">
+       <button class="govuk-button" data-module="govuk-button">Register now</button>
+      </div>
+
+      {% endif %}
+
+    <!--------ACTIVE-----------!>
+
+      {% if data['country']=="selected" and data['risks']=="no" %}
+
+      <div class="govuk-width-container">
+        <a href="/age" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper">
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-panel__title">
+      You are eligible for an Active Search          </h1>
+              <p class="govuk-body">Based on your answers, we advise you register for an active trace, where we use online tools and international volunteers to find your family.</p>
+              <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Why this service is right for you </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <p class="govuk-body">An online tracing service is right for people who:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li> know where to start the search</li>
+                      <li> aren't in hiding.</li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+            How to get started       </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                    <p class="govuk-body">Complete a short online enquiry form. You will need:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>Your name and contact details.</li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+              What happens once you've registered        </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                    <p class="govuk-body">Once you complete the online enquiry form:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>You will receive email confirmation of your enquiry</li>
+                      <li>They can start looking for their family online</li>
+                      <li><strong>We will </strong> contact you to book an appointment at a Red Cross centre near you.</li>
+                    </ul>
+                  </div>
+        </main>
+      <div>
+        <form class="form" action="/TTFreferralform" method="post">
+       <button class="govuk-button" data-module="govuk-button">Make an enquiry</button>
+      </div>
+      {% endif %}
+        {% endif %}
 
 
 {% endblock %}

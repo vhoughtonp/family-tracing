@@ -6,11 +6,13 @@
 
 {% block content %}
 
-        {% if data['who_are_you']=="yes"%}
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-<a href="/risks" class="govuk-back-link">Back</a>
+<a href="/whichcountry" class="govuk-back-link">Back</a>
       <form class="form" action="/result" method="post">
+
+        {% if data['who_are_you']=="yes"%}
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -41,11 +43,6 @@
         {% endif %}
 
             {% if data['who_are_you']=="no"%}
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-two-thirds">
-          <a href="/risks" class="govuk-back-link">Back</a>
-                <form class="form" action="/result" method="post">
-                  <div class="govuk-form-group">
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -74,7 +71,6 @@
             </div>
 
             {% endif %}
-            <div>
 
                 <button class="govuk-button" data-module="govuk-button">Continue</button>
 

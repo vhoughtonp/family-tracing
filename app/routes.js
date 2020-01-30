@@ -103,18 +103,18 @@ router.post('/criteria.html', function (req, res) {
   }
 })
 
-// WHO ARE YOU ROUTING
-router.post('/selectaservice.html', function (req, res) {
+// COUNTRY NOT SURE
+router.post('/risks.html', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  let who_are_you = req.session.data['who_are_you']
+  let country = req.session.data['country']
 
-  if (who_are_you === 'no') {
-    res.redirect('/relationship.html')
+  if (country === 'not_sure') {
+    res.redirect('/risks.html')
   } else {
-    res.redirect('/selectaservice.html')
+    res.redirect('/risks.html')
   }
 })
 

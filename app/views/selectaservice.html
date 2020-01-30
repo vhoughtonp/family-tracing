@@ -6,49 +6,99 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+{% if data['who_are_you']=="yes"%}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 <a href="/whoareyou" class="govuk-back-link">Back</a>
-      <form class="form" action="/criteria.html" method="post">
+    <form class="form" action="/criteria.html" method="post">
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <h1 class="govuk-fieldset__heading">
-                What do you need help with?
-              </h1>
-            </legend>
-            <span id="sign-in-hint" class="govuk-hint">
-            </span>
-            <div class="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="tracing" aria-describedby="sign-in-item-hint">
-                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
-                  Finding my family
-                </label>
-                <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                  You've lost contact with your family and need help finding them.
-                </span>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="reunion" aria-describedby="sign-in-item-hint">
-                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
-                  Bringing my family safely to the UK
-                </label>
-                <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-                  You know where your family are, and want them to come and join you in the UK.
-                </span>
-
-              </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              What do you need help with?
+            </h1>
+          </legend>
+          <span id="sign-in-hint" class="govuk-hint">
+          </span>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="tracing" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+                Finding my family
+              </label>
+              <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                You've lost contact with your family and need help finding them.
+              </span>
             </div>
-          </fieldset>
-        </div>
-                <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-      </form>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="reunion" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+                Bringing my family safely to the UK
+              </label>
+              <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                You know where your family are, and want them to come and join you in the UK.
+              </span>
 
-    </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+              <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
   </div>
+</div>
+{% endif %}
+
+
+{% if data['who_are_you']=="no"%}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<a href="/whoareyou" class="govuk-back-link">Back</a>
+    <form class="form" action="/criteria.html" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              What do they need help with?
+            </h1>
+          </legend>
+          <span id="sign-in-hint" class="govuk-hint">
+          </span>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="tracing" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+                Finding their family
+              </label>
+              <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+               They've lost contact with their family and need help finding them.
+              </span>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="select_a_service" type="radio" value="reunion" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+                Bringing their family safely to the UK
+              </label>
+              <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                They know where their family are, and want them to bring them safely to the UK.
+              </span>
+
+            </div>
+          </div>
+        </fieldset>
+      </div>
+              <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+{% endif %}
 
 {% endblock %}

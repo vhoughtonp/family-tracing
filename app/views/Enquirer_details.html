@@ -1,0 +1,239 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <a href="/referrer_details" class="govuk-back-link">Back</a>
+      <form class="form" action="/consent" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+      Tell us about the person looking
+              </h1>
+            </legend>
+            <p class="govuk-body govuk-!-margin-bottom-3">
+              </p>
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="names">
+      First name
+                      </label>
+                      <input name="e_firstname" class="govuk-input govuk-!-width-two-thirds" id="address-town" type="text">
+                    </div>
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="Surname">
+      Surname
+                      </label>
+                      <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="e_surname" type="text">
+                    </div>
+
+                  </fieldset>
+
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="sort">
+                              <p class="govuk-body govuk-!-margin-bottom-7">
+                                </p>
+                      <strong> How should we contact them? </strong>
+                      <p class="govuk-body govuk-!-margin-bottom-7">
+                        </p>
+                            </label>
+                        </div>
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="citizenship-conditional" name="email" type="checkbox" value="" data-aria-controls="conditional-citizenship-conditional">
+                          <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+      Email
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label" for="contact-by-email">
+                              Email address
+                            </label>
+                            <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="e_email" type="email" spellcheck="false">
+                          </div>
+
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="phone" type="checkbox" value="" data-aria-controls="conditional-citizenship-conditional-2">
+                          <label class="govuk-label govuk-checkboxes__label" for="Phone">
+      Phone or Text message
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label" for="contact-by-phone">
+                              Mobile number
+                            </label>
+                            <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="e_phone" type="tel">
+                          </div>
+
+                        </div>
+
+
+
+                        </div>
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                          <div class="govuk-form-group">
+                            <div class="govuk-form-group">
+
+                              <label class="govuk-label" for="sort">
+                                <p class="govuk-body govuk-!-margin-bottom-7">
+                                  </p>
+                        <strong> What is their primary language? </strong>
+                        <p class="govuk-body govuk-!-margin-bottom-7">
+                          </p>
+                              </label>
+                              <select class="govuk-select" id="sort" name="language">
+    <option value="AF">Select a language</option>
+    <option value="AF">Afrikanns</option>
+    <option value="SQ">Albanian</option>
+    <option value="AR">Arabic</option>
+    <option value="HY">Armenian</option>
+    <option value="EU">Basque</option>
+    <option value="BN">Bengali</option>
+    <option value="BG">Bulgarian</option>
+    <option value="CA">Catalan</option>
+    <option value="KM">Cambodian</option>
+    <option value="ZH">Chinese (Mandarin)</option>
+    <option value="HR">Croation</option>
+    <option value="CS">Czech</option>
+    <option value="DA">Danish</option>
+    <option value="NL">Dutch</option>
+    <option value="EN">English</option>
+    <option value="ET">Estonian</option>
+    <option value="FJ">Fiji</option>
+    <option value="FI">Finnish</option>
+    <option value="FR">French</option>
+    <option value="KA">Georgian</option>
+    <option value="DE">German</option>
+    <option value="EL">Greek</option>
+    <option value="GU">Gujarati</option>
+    <option value="HE">Hebrew</option>
+    <option value="HI">Hindi</option>
+    <option value="HU">Hungarian</option>
+    <option value="IS">Icelandic</option>
+    <option value="ID">Indonesian</option>
+    <option value="GA">Irish</option>
+    <option value="IT">Italian</option>
+    <option value="JA">Japanese</option>
+    <option value="JW">Javanese</option>
+    <option value="KO">Korean</option>
+    <option value="KO">Kurdish (Sorani)</option>
+    <option value="LA">Latin</option>
+    <option value="LV">Latvian</option>
+    <option value="LT">Lithuanian</option>
+    <option value="MK">Macedonian</option>
+    <option value="MS">Malay</option>
+    <option value="ML">Malayalam</option>
+    <option value="MT">Maltese</option>
+    <option value="MI">Maori</option>
+    <option value="MR">Marathi</option>
+    <option value="MN">Mongolian</option>
+    <option value="NE">Nepali</option>
+    <option value="NO">Norwegian</option>
+    <option value="FA">Persian</option>
+    <option value="PL">Polish</option>
+    <option value="PT">Portuguese</option>
+    <option value="PA">Punjabi</option>
+    <option value="QU">Quechua</option>
+    <option value="RO">Romanian</option>
+    <option value="RU">Russian</option>
+    <option value="SM">Samoan</option>
+    <option value="SR">Serbian</option>
+    <option value="SK">Slovak</option>
+    <option value="SL">Slovenian</option>
+    <option value="ES">Spanish</option>
+    <option value="SV">Sudanese </option>
+    <option value="SW">Swahili</option>
+    <option value="SV">Swedish </option>
+    <option value="TA">Tamil</option>
+    <option value="TT">Tatar</option>
+    <option value="TE">Telugu</option>
+    <option value="TH">Thai</option>
+    <option value="BO">Tibetan</option>
+    <option value="TO">Tonga</option>
+    <option value="TR">Turkish</option>
+    <option value="UK">Ukranian</option>
+    <option value="UR">Urdu</option>
+    <option value="UZ">Uzbek</option>
+    <option value="VI">Vietnamese</option>
+    <option value="CY">Welsh</option>
+    <option value="XH">Xhosa</option>
+    <option value="Other">Other</option>
+  </select>
+                      </div>
+
+                            </div>
+
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="citizenship-conditional" name="interpreter" type="checkbox" value="Needs an interpreter" data-aria-controls="conditional-citizenship-conditional">
+                            <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+      Select if they will need an interpreter for appointments</label>
+                          </div>
+              </div>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <label class="govuk-label" for="sort">
+                    <p class="govuk-body govuk-!-margin-bottom-7">
+                      </p>
+            <strong> Is there anything else we should be aware of? </strong>
+                  </label>
+                    <span id="waste-hint" class="govuk-hint">
+                          Select all that apply.
+                        </span>
+                        <p class="govuk-body govuk-!-margin-bottom-7">
+                          </p>
+                        <div class="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste" name="safeguarding" type="checkbox" value="Experienced trafficking">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste">
+                          Experienced trafficking
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-2" name="safeguarding" type="checkbox" value="Experienced poor mental health">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+Experienced poor mental health                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-3" name="safeguarding" type="checkbox" value="Physical impairment">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+Physical impairment                            </label>
+                          </div>
+                          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="citizenship-conditional" name="other" type="checkbox" value="{{ data['other'] }}" data-aria-controls="conditional-citizenship-conditional">
+                              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+          Other - please specify
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">
+                              <div class="govuk-form-group">
+                                <input class="govuk-input govuk-input--width-20" id="width-20" name="other" type="text" spellcheck="false">
+                              </div>                          </div>
+
+                        <div>
+                          <form class="form" action="/consent" method="post">
+                      <button class="govuk-button" data-module="govuk-button">Continue</button>
+                      </div>
+            </form>
+          </div>
+        </div>
+      {% endblock %}
