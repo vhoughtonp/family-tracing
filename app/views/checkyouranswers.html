@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="" class="govuk-back-link">Back</a>
+  <a href="/consent" class="govuk-back-link">Back</a>
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
@@ -25,7 +25,7 @@
               <p>{{ data['r_firstname']}} {{ data['r_surname']}}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="/referrer_details">
+              <a class="govuk-link" href="/referrer-details">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
@@ -38,7 +38,7 @@ Relationship            </dt>
                 <p>{{ data['organisation'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="/referrer_details">
+              <a class="govuk-link" href="/referrer-details">
                 Change<span class="govuk-visually-hidden"> date of birth</span>
               </a>
             </dd>
@@ -52,7 +52,7 @@ Relationship            </dt>
               <p>{{ data['r_phone'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="/referrer_details">
+              <a class="govuk-link" href="/referrer-details">
                 Change<span class="govuk-visually-hidden"> contact details</span>
               </a>
             </dd>
@@ -118,9 +118,9 @@ Relationship            </dt>
                   </div>
                 </dl>
 
-        <h2 class="govuk-heading-m">Now send your application</h2>
+        <h2 class="govuk-heading-m">Now send your enquiry</h2>
 
-        <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+        <p class="govuk-body">We will send you confirmation straight away.</p>
 
         <form action="/confirmationoffline" method="post" novalidate>
 
