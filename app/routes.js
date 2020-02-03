@@ -78,7 +78,7 @@ router.post('/relationship', function (req, res) {
   let who_are_you = req.session.data['who_are_you']
 
   if (who_are_you === 'me') {
-    res.redirect('/enquirer_details.html')
+    res.redirect('/enquirerdetails.html')
   }
    else {
     res.redirect('/relationship')
