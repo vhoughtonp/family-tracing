@@ -6,7 +6,6 @@
 
 {% block content %}
 
-{% if data['who_are_you']=="yes"%}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 <a href="selectaservice" class="govuk-back-link">Back</a>
@@ -45,48 +44,5 @@
 
     </div>
   </div>
-  {% endif %}
-
-  {% if data['who_are_you']=="no"%}
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-  <a href="selectaservice" class="govuk-back-link">Back</a>
-        <form class="form" action="/whichcountry.html" method="post">
-
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                <h1 class="govuk-fieldset__heading">
-                  How did they lose contact with their family?
-                </h1>
-              </legend>
-              <span id="changed-name-hint" class="govuk-hint">
-
-              </span>
-              <div class="govuk-radios govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changed-name" name="criteria" type="radio" value="eligible">
-                  <label class="govuk-label govuk-radios__label" for="changed-name">
-                    During war, natural disaster or migration
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="changed-name-2" name="criteria" type="radio" value="not_eligible">
-                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                    Something else, such as adoption or family disputes.
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-
-                  <button class="govuk-button" data-module="govuk-button">Continue</button>
-
-        </form>
-
-      </div>
-    </div>
-    {% endif %}
-
 
 {% endblock %}

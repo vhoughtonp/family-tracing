@@ -70,18 +70,18 @@ router.post('/name/of/url/in/page', function (req, res) {
 })
 
 // WHAT RELATIONSHIP - LEGAL ADVISORS GO TO LEGAL RESULT
-router.post('/selectaservice1.html', function (req, res) {
+router.post('/relationship', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  let relationship = req.session.data['relationship']
+  let who_are_you = req.session.data['who_are_you']
 
-  if (relationship === 'social_worker') {
-    res.redirect('/result_nolegalcases.html')
+  if (who_are_you === 'me') {
+    res.redirect('/enquirer_details.html')
   }
    else {
-    res.redirect('/selectaservice1.html')
+    res.redirect('/relationship')
   }
 })
 

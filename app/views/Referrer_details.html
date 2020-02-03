@@ -8,18 +8,22 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <a href="/referrer_details" class="govuk-back-link">Back</a>
+    <a href="/relationship" class="govuk-back-link">Back</a>
     <form class="form" action="/Enquirer_details" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
-    Tell us about you (referrer)
+    Tell us about you
             </h1>
+            <span id="passport-number-hint" class="govuk-hint">
+            The person referring.
+          </span>
           </legend>
-          <p class="govuk-body govuk-!-margin-bottom-3">
+          <p class="govuk-body govuk-!-margin-bottom-2">
             </p>
+
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                   <div class="govuk-form-group">
@@ -36,51 +40,21 @@
                     <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="r_surname" type="text">
                   </div>
 
-                </fieldset>
-                <div class="govuk-form-group">
-                     <fieldset class="govuk-fieldset">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                              <label class="govuk-label" for="address-town">
-                <strong> What is your relationship with the person enquiring? </strong>
-                              </label>
-                            </legend>
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="Surname">
+    Organisation
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="organisation" type="text">
+                  </div>
 
-                            <div class="govuk-radios">
-                              <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="changed-name" name="relationship" type="radio" value="Legal professional or advisor">
-                                <label class="govuk-label govuk-radios__label" for="changed-name">
-                                  Legal professional or advisor
-                                </label>
-                              </div>
-                              <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="changed-name" name="relationship" type="radio" value="Social worker">
-                                <label class="govuk-label govuk-radios__label" for="changed-name">
-                                  Social worker
-                                </label>
-                              </div>
-                              <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="changed-name" name="relationship" type="radio" value="Friend or family member">
-                                <label class="govuk-label govuk-radios__label" for="changed-name">
-                                  Friend or family member
-                                </label>
-                              </div>
-                              <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="changed-name" name="relationship" type="radio" value="Other">
-                                <label class="govuk-label govuk-radios__label" for="changed-name">
-                                  Other
-                                </label>
-                            </div>
-                          </fieldset>
-                </div>
+                </fieldset>
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
                       <div class="govuk-form-group">
                           <label class="govuk-label" for="sort">
-                            <p class="govuk-body govuk-!-margin-bottom-7">
+                            <p class="govuk-body govuk-!-margin-bottom-5">
                               </p>
                     <strong> How should we contact you? </strong>
-                    <p class="govuk-body govuk-!-margin-bottom-7">
-                      </p>
                           </label>
                       </div>
                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -95,7 +69,7 @@
                           <label class="govuk-label" for="contact-by-email">
                             Email address
                           </label>
-                          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="r_email" type="email" spellcheck="false">
+                          <input class="govuk-input govuk-!-width-two-thirds" id="contact-by-email" name="r_email" type="email" spellcheck="false">
                         </div>
 
                       </div>
@@ -110,9 +84,11 @@
                           <label class="govuk-label" for="contact-by-phone">
                             Mobile number
                           </label>
-                          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="r_phone" type="tel">
+                          <input class="govuk-input govuk-!-width-two-thirds" id="contact-by-phone" name="r_phone" type="tel">
                         </div>
                       </div>
+                      <p class="govuk-body govuk-!-margin-bottom-7">
+                        </p>
 
                       <div>
                         <form class="form" action="/consent" method="post">

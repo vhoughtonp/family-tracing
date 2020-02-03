@@ -6,7 +6,6 @@
 
 {% block content %}
 
-{% if data['who_are_you']=="yes"%}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 <a href="/selectaservice" class="govuk-back-link">Back</a>
@@ -37,39 +36,5 @@ We may be able to help you reunite with your family by:
 
     </div>
   </div>
-  {% endif %}
-
-  {% if data['who_are_you']=="no"%}
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-  <a href="/selectaservice" class="govuk-back-link">Back</a>
-  <div class="govuk-panel govuk-panel--confirmation">
-    <h1 class="govuk-panel__title">
-      You need Family Reunion support
-    </h1>
-  </div>
-  <p>
-The Family Reunion service helps families reunite by:
-  </p>
-  <ul class="govuk-list govuk-list--bullet">
-  <li>helping with visa applications</li>
-  <li>arranging flights for family members to travel to the UK</li>
-  </ul>
-  <p>
-    <strong>Contact your local service for support.</strong>
-  </p>
-        <form class="form" action="/searchresults" method="post">
-        <div class="govuk-form-group">
-           <label class="govuk-label" for="address-line-1">
-             Enter town or postcode <span class="govuk-visually-hidden">line 1 of 2</span>
-           </label>
-           <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
-         </div>
-
-         <button class="govuk-button" data-module="govuk-button">Find a local service</button>
-
-      </div>
-    </div>
-    {% endif %}
 
 {% endblock %}

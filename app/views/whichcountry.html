@@ -18,14 +18,8 @@
 Which country should we start our search in?
       </h1>
     </legend>
-    {% if data['who_are_you']=="yes"%}
     <span id="citizenship-conditional-hint" class="govuk-hint">
 We can only start a search in one country, which country should we look for your missing relative in?    </span>
-{% endif %}
-{% if data['who_are_you']=="no"%}
-<span id="citizenship-conditional-hint" class="govuk-hint">
-We can only start a search in one country, where should we start?    </span>
-{% endif %}
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">

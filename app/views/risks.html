@@ -10,13 +10,11 @@
     <div class="govuk-grid-column-two-thirds">
 <a href="/whichcountry" class="govuk-back-link">Back</a>
       <form class="form" action="/age" method="post">
-{% if data['who_are_you']=="yes"%}
-
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
       <h1 class="govuk-fieldset__heading">
-Are you, or your relatives in hiding?
+Are you, or your family in hiding?
       </h1>
     </legend>
     <span id="sign-in-hint" class="govuk-hint">
@@ -59,64 +57,11 @@ Why are you asking this?          </span>
 </div>
 </div>
 
-{% endif %}
-
-    {% if data['who_are_you']=="no"%}
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                  <h1 class="govuk-fieldset__heading">
-  Is the enquirer, or their missing family, in hiding?
-                  </h1>
-                </legend>
-                <span id="sign-in-hint" class="govuk-hint">
-                </span>
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="sign-in" name="risks" type="radio" value="yes" aria-describedby="sign-in-item-hint">
-                    <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
-    Yes                </label>
-                    <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-Publicly searching for this family could be dangerous.</span>
-                  </div>
-
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="sign-in" name="risks" type="radio" value="no" aria-describedby="sign-in-item-hint">
-                    <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
-    No                </label>
-                    <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-This family is not in hiding.          </span>
-                  </div>
-                </div>
-              </fieldset>
-
-                <div>
-                  <p class="govuk-body govuk-!-margin-bottom-5">
-                    </p>
-
-                  <details class="govuk-details" data-module="govuk-details">
-                    <summary class="govuk-details__summary">
-                      <span class="govuk-details__summary-text">
-            Why are you asking this?          </span>
-                    </summary>
-                    <div class="govuk-details__text">
-                      <p class="govuk-body govuk-!-margin-bottom-5">
-                        Some clients have lost contact with their families under dangerous circumstances and are now in hiding. They worry that publicly searching for their family could put them at risk. </p>
-                          <img src="/public/images/activetrace.png" alt="A uniformed red cross volunteer searching for family in a rural village">
-                          <p>Here is a picture of a uniformed red cross volunteer, publicly searching in a public village. We will only suggest a service like this if you feel safe.
-                            </p>
-                      </div>
-            </div>
-          </div>
-
-        {% endif %}
-
-
     <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
     Continue
     </button>
 
-    <button action="/age" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
     I'm not sure</button>
       </div>
 
