@@ -6,16 +6,15 @@
 
 {% block content %}
 
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <a href="/referrer_details" class="govuk-back-link">Back</a>
+      <a href="/referrerdetails" class="govuk-back-link">Back</a>
       <form class="form" action="/checkyouranswers" method="post">
 
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h1 class="govuk-fieldset__heading">
-Have you got {{ data['e_firstname'] }}'s consent?
+Do you understand the following statements?
               </h1>
             </legend>
             <p class="govuk-body govuk-!-margin-bottom-3">
@@ -25,21 +24,21 @@ Have you got {{ data['e_firstname'] }}'s consent?
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
               <label class="govuk-label govuk-checkboxes__label" for="waste">
-                {{ data['e_firstname'] }} understands their information is being shared securely with the British Red Cross and we are opening a case.
+              I (){{ data['e_firstname'] }}) understand my information is being shared securely with the British Red Cross and we are opening a case.
               </label>
             </div>
             <div class="govuk-checkboxes">
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
             <label class="govuk-label govuk-checkboxes__label" for="waste">
-              {{ data['e_firstname'] }} understands we will be contacting them directly
+              I (){{ data['e_firstname'] }}) understand I will be contacted directly
             </label>
           </div>
           <div class="govuk-checkboxes">
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
           <label class="govuk-label govuk-checkboxes__label" for="waste">
-      {{ data['e_firstname'] }} understands that if we are unable to contact them (twice) or if they fail to attend two appointments, we will delete their case.
+        I (){{ data['e_firstname'] }}) understand that if the red cross are unable to contact me (twice) or if I fail to attend two appointments, my case will be closed.
           </label>
         </div>
 
