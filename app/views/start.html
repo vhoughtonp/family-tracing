@@ -7,28 +7,29 @@
 
 {% block content %}
 
-<main class="govuk-main-wrapper " id="main-content" role="main">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Finding missing family</h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="/selectaservice" class="govuk-back-link">Back</a>
+    <form class="form" action="/criteria" method="post">
 
-      <p class="govuk-body">We have four services to help find your family:</p>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+            Get help finding your family
+            </h1>
+          </legend>
+      <p class="govuk-body"> There are two ways we can help:</p>
 
-<ol class="govuk-list govuk-list--number">
-            <li> <strong>In person</strong>: in villages, towns, cities or camps</li>
-            <li> <strong>Online search</strong>: create a profile or search for family on <a href="https://familylinks.icrc.org/europe/en/Pages/Home.aspx">Trace the face</a></li>
-          <li> <strong>Red Cross databases</strong>: secure database of people looking for family</li>
-          <li> <strong>Public databases</strong>: Such as tax, employment, birth and death databases in different countries</li>
-</ol>
-<p class="govuk-body">You can use some, or all of these services, depending on your circumstances.</p>
+<img src="/public/images/options.png" width="100%">
+<p class="govuk-body"></p>
+<p class="govuk-body">The service we offer depends on your circumstances.</p>
+<p class="govuk-body"><strong>Answer a few questions to find out how we can help.</strong></p>
 
-        <p class="govuk-body"> <strong>Answer this short questionnaire to find out which service is right for you.</strong></p>
-
-            <a href="/selectaservice" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 govuk-button--start" data-module="govuk-button">
-              Find the right service
-              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-              </svg>
-            </a>
-
+        <a href="/criteria" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 govuk-button--start" data-module="govuk-button">
+    Find the right service
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        </a>
 {% endblock %}

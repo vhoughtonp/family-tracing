@@ -103,23 +103,9 @@ router.post('/criteria.html', function (req, res) {
   }
 })
 
-// COUNTRY NOT SURE
-router.post('/risks.html', function (req, res) {
-  // Get the answer from session data
-  // The name between the quotes is the same as the 'name' attribute on the input elements
-  // However in JavaScript we can't use hyphens in variable names
-
-  let country = req.session.data['country']
-
-  if (country === 'not_sure') {
-    res.redirect('/risks.html')
-  } else {
-    res.redirect('/risks.html')
-  }
-})
 
 // CRITERIA
-router.post('/whichcountry.html', function (req, res) {
+router.post('/whichcountry', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -129,7 +115,7 @@ router.post('/whichcountry.html', function (req, res) {
   if (criteria === 'not_eligible') {
     res.redirect('/result_not_eligible.html')
   } else {
-    res.redirect('/whichcountry.html')
+    res.redirect('/whichcountry')
   }
 })
 

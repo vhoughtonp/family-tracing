@@ -7,7 +7,7 @@
 {% block content %}
 <!-----------OFFLINE TTF----------------!>
 
-  {% if (data['country']=="not_sure" or data['risks']=="yes") and data['age']=="under-18" %}
+  {% if (data['which_country']=="1_Afghanistan"%}
 
   <div class="govuk-width-container">
     <a href="/age" class="govuk-back-link">Back</a>
@@ -17,7 +17,7 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-panel__title">
-  You are eligible for an Offline Search          </h1>
+You are eligible to join our missing persons register</h1>
           <p class="govuk-body">Based on your answers, we advise you search for your family offline. We add to a secure database of people across the world searching for their family. </p>
           <p>Your relative can find your details at any of the global Red Cross centres near them.</p>
           <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -228,5 +228,6 @@
     <form class="form" action="/whoareyou" method="post">
    <button class="govuk-button" data-module="govuk-button">Make an enquiry</button>
   </div>
+  <p class='govuk-body'><strong> Need help?</strong> <a href="/contactservice">Contact your local service</a></p>
   {% endif %}
 {% endblock %}

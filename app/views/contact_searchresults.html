@@ -1,0 +1,81 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<a href="/selectaservice" class="govuk-back-link">Back</a>
+<div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Contact your local service
+  </h1>
+  </div>
+      <form class="form" action="/contact_searchresults" method="post">
+      <div class="govuk-form-group">
+         <label class="govuk-label" for="address-line-1">
+           Enter town or postcode <span class="govuk-visually-hidden">line 1 of 2</span>
+         </label>
+         <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
+       </div>
+
+       <button class="govuk-button" data-module="govuk-button">Find a local service</button>
+       <dl class="govuk-summary-list">
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Refugee support, Angel
+           </dt>
+           <dd class="govuk-summary-list__value">
+             Aztec Row
+             <div>
+               5 Berners Road
+             </div>
+             <div>
+              Angel
+             </div>
+             <div>
+               N1 0PW
+             </div>
+             <div>
+               <a class="govuk-link" href="https://goo.gl/maps/n1oe2z6Hg2v86cze8"target="blank">Get directions</a>
+             </div>
+           </dd>
+           <dd class="govuk-summary-list__value">
+             <a class="govuk-link" href="<a href="mailto:LondonRU@redcross.org?subject="Family Reunion Enquiry">LondonRU@redcross.org.uk</a>
+               <div>
+                 <a class="govuk-link" href="<a href="#>020 7704 5670</a>
+               </div>
+           </dd>
+         </div>
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Refugee support, Harlow
+           </dt>
+           <dd class="govuk-summary-list__value">
+            15-17 Westgate
+             <div>
+              The High Harlow
+             </div>
+             <div>
+              Essex
+             </div>
+             <div>
+               CM20 1JP
+             </div>
+             <div>
+               <a class="govuk-link" href="https://goo.gl/maps/hxxwoo9LzcBKjAWS8"target="blank">Get directions</a>
+             </div>
+           </dd>
+           <dd class="govuk-summary-list__value">
+             <a class="govuk-link" href="<a href="mailto:EssexRU@redcross.org?subject="Family Reunion Enquiry">EssexRU@redcross.org.uk</a>
+             <div>
+               <a class="govuk-link" href="<a href="#">01245 293790</a>
+             </div>
+           </dd>
+           <dd class="govuk-summary-list__actions">
+               <span class="govuk-visually-hidden"> name</span>
+           </dd>
+         </div>
+{% endblock %}

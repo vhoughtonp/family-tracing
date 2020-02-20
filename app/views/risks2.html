@@ -1,0 +1,65 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<a href="/risksvideo" class="govuk-back-link">Back</a>
+    <form class="form" action="/result_afghanistan" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Who is it safe to share your personal information with?
+            </h1>
+          </legend>
+          <span id="sign-in-hint" class="govuk-hint">
+            Select all that apply
+          </span>
+
+
+
+          <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          Local people where you come from
+        </label>
+        <span id="sign-in-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          Such as neighbours, local teachers or community leaders
+        </span>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+        Governments in the country you are looking in
+        </label>
+        <span id="sign-in-item-hint" class="govuk-hint govuk-checkboxes__hint">
+So we can check records in those countries
+        </span>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          Red Cross/Red Crescent staff and volunteers
+        </label>
+      </div>
+
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+      </div>
+              <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </div>
+</div>
+
+{% endblock %}

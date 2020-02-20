@@ -1,0 +1,34 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<a href="/risks" class="govuk-back-link">Back</a>
+      <form class="form" action="/risks2" method="post">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+Watch this video:      </h1>
+    </legend>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/1VzhJnGhu4Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </fieldset>
+
+    <div>
+      <p class="govuk-body govuk-!-margin-bottom-5">
+        </p>
+</div>
+</div>
+
+    <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+    Continue
+    </button>
+    </div>
+  </div>
+
+{% endblock %}

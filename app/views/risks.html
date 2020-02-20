@@ -1,72 +1,53 @@
-{% extends "layout_unbranded.html" %}
+How {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   Question page
 {% endblock %}
-
 {% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-<a href="/whichcountry" class="govuk-back-link">Back</a>
-      <form class="form" action="/age" method="post">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<a href="/specificlocation" class="govuk-back-link">Back</a>
+    <form class="form" action="/risks-video" method="post">
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-      <h1 class="govuk-fieldset__heading">
-Are you, or your family in hiding?
-      </h1>
+<fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+    <h1 class="govuk-fieldset__heading">
+Are you or your family in hiding or in danger?
+</h1>
     </legend>
-    <span id="sign-in-hint" class="govuk-hint">
-    </span>
     <div class="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in" name="risks" type="radio" value="yes" aria-describedby="sign-in-item-hint">
-        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
-Yes                </label>
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          <strong>Yes</strong>
+        </label>
         <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-Publicly searching could put me or my family in danger. </span>
+Publicly searching for my family could be dangerous.
+</span>
       </div>
-
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in" name="risks" type="radio" value="no" aria-describedby="sign-in-item-hint">
-        <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
-No                </label>
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          <strong>No</strong>
+        </label>
         <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-My family and I are not currently in hiding.         </span>
+My family and I are not currently in hiding</span>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+          <strong>I'm not sure</strong>
+        </label>
       </div>
     </div>
   </fieldset>
-
-    <div>
-      <p class="govuk-body govuk-!-margin-bottom-5">
-        </p>
-
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-Why are you asking this?          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body govuk-!-margin-bottom-5">
-            Some clients have lost contact with their families under dangerous circumstances and are now in hiding. They worry that publicly searching for their family could put them at risk. </p>
-              <img src="/public/images/activetrace.png" alt="A uniformed red cross volunteer searching for family in a rural village">
-              <p>Here is a picture of a uniformed red cross volunteer, publicly searching in a public village. We will only suggest a service like this if you feel safe.
-                </p>
-          </div>
+  <div>
 </div>
 </div>
 
-    <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
-    Continue
-    </button>
-
-    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-    I'm not sure</button>
-      </div>
-
-
-    </div>
+  <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+  Continue
+  </button>
   </div>
-
+</div>
 {% endblock %}

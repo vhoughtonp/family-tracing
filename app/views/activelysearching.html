@@ -1,0 +1,46 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">1. Actively searching</h1>
+
+<p class="govuk-body">If you have enough information about your relatives, we can go out and look for them in person.</p>
+
+<h4 class="govuk-heading-s">Useful things to know:</h4>
+
+<ul class="govuk-list govuk-list--bullet">
+            <li> <strong>It's public:</strong> with your permission, we share your info with people who can help us find your family.</li>
+          <li> <strong>It takes time:</strong> searches can take months, and often take years.</li>
+              <li> <strong>It's thorough:</strong> we visit villages and camps, send messages and check records.</li>
+</ul>
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Who is this service right for?
+        </span>
+      </h2>
+    </div>
+
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <ul class="govuk-list govuk-list--bullet">
+                  <li> Feel safe if we publicise the search, ask questions and check public records.</li>
+                <li>Have enough information about their relatives and where they might be.</li>
+                    <li>Are looking in a country that is currently accepting enquiries. </li>
+      </ul>
+    </div>
+    </div>
+    <p class="govuk-body">Continue to find out about our missing persons register.</p>
+
+  </div>
+        <button class="govuk-button" action=""/redcrossregister" data-module="govuk-button">Continue</button>
+
+{% endblock %}
