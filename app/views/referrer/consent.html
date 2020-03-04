@@ -1,0 +1,48 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="/referrer/checkyouranswers" class="govuk-back-link">Back</a>
+    <form class="form" action="/referrer/checkyouranswers" method="post">
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+      Check if {{ data['e_firstname']}} consents to:
+      </h1>
+    </legend>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          You making a referral on their behalf
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Sharing their information with the Red Cross
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Being contacted directly by the Red Cross
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+          <a href="/referrer/checkyouranswers" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+          Continue</a>
+
+{% endblock %}

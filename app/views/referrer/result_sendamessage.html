@@ -1,0 +1,26 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <a href="/selectaservice" class="govuk-back-link">Back</a>
+      <h1 class="govuk-heading-xl">Contact our messaging service</h1>
+
+      <form class="form" action="/answer" method="post">
+        <p>{{ data['passport-issued-day'] }}
+          {{ data['passport-issued-month'] }}
+          {{ data['passport-issued-year'] }}
+        </p>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

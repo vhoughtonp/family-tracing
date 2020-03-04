@@ -1,0 +1,23 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="/referrer/findingfamily" class="govuk-back-link">Back</a>
+
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <p class="govuk-body govuk-!-margin-bottom-2"></p>
+          <img src="/public/images/register.png" width="100%">
+
+          <p class="govuk-body"> </p>
+
+          <a href="/referrer/2-active" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+          Continue</a>
+
+{% endblock %}

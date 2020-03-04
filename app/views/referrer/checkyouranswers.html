@@ -1,0 +1,355 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="/relative2" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <h1 class="govuk-heading-xl">Check your answers before you submit</h1>
+
+        <h2 class="govuk-heading-m">Referrers details</h2>
+
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p>{{ data['r_firstname']}} {{ data['r_surname']}}</p>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/referrer/referrerdetails">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Organisation
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p>{{ data['organisation']}}</p>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/referrer/referrerdetails">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Relationship
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p>{{ data['r_relationship']}}</p>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/referrer/referrerdetails">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                      </a>
+                    </dd>
+                  </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Contact details
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <p>{{ data['r_email'] }}</p>
+                      <p>{{ data['r_phone'] }}</p>
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/referrer/referrerdetails">
+                        Change<span class="govuk-visually-hidden"> contact details</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+
+                <h2 class="govuk-heading-m">Enquirers details</h2>
+
+                        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                              Name
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                              <p>{{ data['e_firstname']}} {{ data['e_surname']}} ({{ data['e_additional']}})</p>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                              <a class="govuk-link" href="/referrer/enquirerdetails">
+                                Change<span class="govuk-visually-hidden"> name</span>
+                              </a>
+                            </dd>
+                          </div>
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                              Contact details
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                              <p>{{ data['e_email'] }}</p>
+                              <p>{{ data['e_phone'] }}</p>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                              <a class="govuk-link" href="/referrer/enquirerdetails">
+                                Change<span class="govuk-visually-hidden"> contact details</span>
+                              </a>
+                            </dd>
+                          </div>
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                              Gender
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                              <p>{{ data['e_gender']}}</p>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                              <a class="govuk-link" href="/referrer/enquirerdetails">
+                                Change<span class="govuk-visually-hidden"> name</span>
+                              </a>
+                            </dd>
+                          </div>
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                              Country of birth
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                              <p>{{ data['e_country']}}</p>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                              <a class="govuk-link" href="/referrer/enquirerdetails">
+                                Change<span class="govuk-visually-hidden"> name</span>
+                              </a>
+                            </dd>
+                          </div>
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                              Primary language
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                              <p>{{ data['e_language']}}</p>
+                              <p>{{ data['interpreter']}}</p>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                              <a class="govuk-link" href="/referrer/enquirerdetails">
+                                Change<span class="govuk-visually-hidden"> name</span>
+                              </a>
+                            </dd>
+                          </div>
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+Additional information
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                              <p>{{ data['safeguarding']}}</p>
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                              <a class="govuk-link" href="/referrer/enquirerdetails">
+                                Change<span class="govuk-visually-hidden"> name</span>
+                              </a>
+                            </dd>
+                          </div>
+                        </dl>
+
+
+                        <h2 class="govuk-heading-m">Relatives details (1)</h2>
+
+                                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                  <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                      Name
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                      <p>{{ data['r1_firstname']}} {{ data['r1_surname']}} ({{ data['r1_additional']}})</p>
+                                    </dd>
+                                    <dd class="govuk-summary-list__actions">
+                                      <a class="govuk-link" href="/referrer/relative">
+                                        Change<span class="govuk-visually-hidden"> name</span>
+                                      </a>
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                      Relationship
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                      <p>{{ data['r1_relationship']}}</p>
+                                    </dd>
+                                    <dd class="govuk-summary-list__actions">
+                                      <a class="govuk-link" href="/referrer/relative">
+                                        Change<span class="govuk-visually-hidden"> name</span>
+                                      </a>
+                                    </dd>
+                                  </div>
+
+                                  <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                      Gender
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                      <p>{{ data['r1_gender']}}</p>
+                                    </dd>
+                                    <dd class="govuk-summary-list__actions">
+                                      <a class="govuk-link" href="/referrer/relative">
+                                        Change<span class="govuk-visually-hidden"> name</span>
+                                      </a>
+                                    </dd>
+                                  </div>
+                                  <div class="govuk-summary-list__row">
+                                    <dt class="govuk-summary-list__key">
+                                      Country of birth
+                                    </dt>
+                                    <dd class="govuk-summary-list__value">
+                                      <p>{{ data['r1_country']}}</p>
+                                    </dd>
+                                    <dd class="govuk-summary-list__actions">
+                                      <a class="govuk-link" href="/referrer/relative">
+                                        Change<span class="govuk-visually-hidden"> name</span>
+                                      </a>
+                                    </dd>
+                                  </div>
+                                </dl>
+                                <h2 class="govuk-heading-m">Relatives details (2)</h2>
+
+                                        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                                          <div class="govuk-summary-list__row">
+                                            <dt class="govuk-summary-list__key">
+                                              Name
+                                            </dt>
+                                            <dd class="govuk-summary-list__value">
+                                              <p>{{ data['r2_firstname']}} {{ data['r2_surname']}} {{ data['r2_additional']}}</p>
+                                            </dd>
+                                            <dd class="govuk-summary-list__actions">
+                                              <a class="govuk-link" href="/referrer/relative2">
+                                                Change<span class="govuk-visually-hidden"> name</span>
+                                              </a>
+                                            </dd>
+                                          </div>
+                                          <div class="govuk-summary-list__row">
+                                            <dt class="govuk-summary-list__key">
+                                              Relationship
+                                            </dt>
+                                            <dd class="govuk-summary-list__value">
+                                              <p>{{ data['r2_relationship']}}</p>
+                                            </dd>
+                                            <dd class="govuk-summary-list__actions">
+                                              <a class="govuk-link" href="/referrer/relative2">
+                                                Change<span class="govuk-visually-hidden"> name</span>
+                                              </a>
+                                            </dd>
+                                          </div>
+                                          <div class="govuk-summary-list__row">
+                                            <dt class="govuk-summary-list__key">
+                                              Gender
+                                            </dt>
+                                            <dd class="govuk-summary-list__value">
+                                              <p>{{ data['r2_gender']}}</p>
+                                            </dd>
+                                            <dd class="govuk-summary-list__actions">
+                                              <a class="govuk-link" href="/referrer/relative2">
+                                                Change<span class="govuk-visually-hidden"> name</span>
+                                              </a>
+                                            </dd>
+                                          </div>
+                                          <div class="govuk-summary-list__row">
+                                            <dt class="govuk-summary-list__key">
+                                              Country of birth
+                                            </dt>
+                                            <dd class="govuk-summary-list__value">
+                                              <p>{{ data['r2_country']}}</p>
+                                            </dd>
+                                            <dd class="govuk-summary-list__actions">
+                                              <a class="govuk-link" href="/referrer/relative2">
+                                                Change<span class="govuk-visually-hidden"> name</span>
+                                              </a>
+                                            </dd>
+                                          </div>
+                                        </dl>
+                                        <h2 class="govuk-heading-m">Other useful contacts</h2>
+
+                                                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                                                  <div class="govuk-summary-list__row">
+                                                    <dt class="govuk-summary-list__key">
+                                                      Name
+                                                    </dt>
+                                                    <dd class="govuk-summary-list__value">
+                                                      <p>{{ data['a_firstname']}} {{ data['a_surname']}}</p>
+                                                    </dd>
+                                                    <dd class="govuk-summary-list__actions">
+                                                      <a class="govuk-link" href="/referrer/additionalcontacts">
+                                                        Change<span class="govuk-visually-hidden"> name</span>
+                                                      </a>
+                                                    </dd>
+                                                  </div>
+                                                  <div class="govuk-summary-list__row">
+                                                    <dt class="govuk-summary-list__key">
+                                                      Organisation
+                                                    </dt>
+                                                    <dd class="govuk-summary-list__value">
+                                                      <p>{{ data['a_organisation']}}</p>
+                                                    </dd>
+                                                    <dd class="govuk-summary-list__actions">
+                                                      <a class="govuk-link" href="/referrer/additionalcontacts">
+                                                        Change<span class="govuk-visually-hidden"> name</span>
+                                                      </a>
+                                                    </dd>
+                                                  </div>
+                                                  <div class="govuk-summary-list__row">
+                                                    <dt class="govuk-summary-list__key">
+                                                      Relationship
+                                                    </dt>
+                                                    <dd class="govuk-summary-list__value">
+                                                      <p>{{ data['a_relationship']}}</p>
+                                                    </dd>
+                                                    <dd class="govuk-summary-list__actions">
+                                                      <a class="govuk-link" href="/referrer/additionalcontacts">
+                                                        Change<span class="govuk-visually-hidden"> name</span>
+                                                      </a>
+                                                    </dd>
+                                                  </div>
+
+                                                  <div class="govuk-summary-list__row">
+                                                    <dt class="govuk-summary-list__key">
+                                                      Contact details
+                                                    </dt>
+                                                    <dd class="govuk-summary-list__value">
+                                                      <p>{{ data['a_email'] }}</p>
+                                                      <p>{{ data['a_phone'] }}</p>
+                                                    </dd>
+                                                    <dd class="govuk-summary-list__actions">
+                                                      <a class="govuk-link" href="/referrer/additionalcontacts">
+                                                        Change<span class="govuk-visually-hidden"> contact details</span>
+                                                      </a>
+                                                    </dd>
+                                                  </div>
+                                                </dl>
+
+                                                <h2 class="govuk-heading-m">Now submit your referral</h2>
+
+                                                <p class="govuk-body">We will send you confirmation to you and the enquirer straight away via email and/or text.</p>
+
+
+        <form action="/referrer/confirmation" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Submit referral
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+      {% endblock %}

@@ -1,0 +1,41 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Registration complete
+          </h1>
+          <div class="govuk-panel__body">
+            Your reference number<br><strong>HDJ2123F</strong>
+          </div>
+        </div>
+
+        <p class="govuk-body">We have registered your tracing enquiry and sent you a confirmation email. You can also download your confirmation letter by clicking below:</p>
+
+        <a href="/public/images/offline-confirmation.png" target="_blank" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 govuk-button--start" data-module="govuk-button">
+                    <img src="/public/images/down-arrow.svg" width="5%"> Download confirmation letter
+
+        </a>
+        <h2 class="govuk-heading-m">What happens next</h2>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>You</strong> can search for your family online</li>
+  <li><strong>We</strong> will add your details and who you are looking for to our international database</li>
+  <li><strong>Your relative</strong> will be able to find you at any Red Cross or Red Crescent centre near them.</li>
+  <li><strong>We</strong> will contact you if we hear from them.</li>
+</ul>
+
+      </div>
+    </div>
+  </main>
+</div>
+      {% endblock %}

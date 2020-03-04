@@ -1,0 +1,81 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<a href="/whichcountry" class="govuk-back-link">Back</a>
+    <form class="form" action="/referrer/risks" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Where in particular should we look?
+            </h1>
+          </legend>
+          <span id="sign-in-hint" class="govuk-hint">
+            Select all that apply
+          </span>
+
+
+
+          <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          A village or small town
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          A refugee camp
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          A specific address
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+A prison or detention centre        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+Somewhere else in particular    </label>
+      </div>
+    </div>
+  </fieldset>
+
+<p class="govuk-body govuk-!-margin-bottom-1"> <strong>or</strong></p>
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+<label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+There is no specific place to look     </label>
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+      </div>
+              <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </div>
+</div>
+
+{% endblock %}

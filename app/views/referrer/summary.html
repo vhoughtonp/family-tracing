@@ -1,0 +1,31 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="/referrer/start" class="govuk-back-link">Back</a>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+Check which service(s) you are eligible for  </h1>
+          </legend>
+          <p class="govuk-body">The support we offer depends on:</p>
+<ol class="govuk-list govuk-list--number">
+  <li>How much information we are given</li>
+  <li>Who we can safely share that information with.</li>
+</ol>
+
+          <p class="govuk-body"><strong>Answer the next few questions to check eligibility.</strong></p>
+
+          <a href="/referrer/criteria" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+        Check eligibility </a>
+
+{% endblock %}
