@@ -1,0 +1,32 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="/referrer/consent" class="govuk-back-link">Back</a>
+    <form class="form" action="/referrer/checkyouranswers" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+Useful things to know         </h1>
+          </legend>
+          <p class="govuk-body govuk-!-margin-bottom-2"></p>
+          <h3 class="govuk-heading-m">We will contact Abdul to arrange an appointment</h3>
+          <p class="govuk-body"></p>
+          <h3 class="govuk-heading-m">We will not start looking for anyone until then</h3>
+          <p class="govuk-body"> </p>
+          <h3 class="govuk-heading-m">We may not be successful</h3>
+          <p class="govuk-body govuk-!-margin-bottom-7"></p>
+
+          <a href="/referrer/checkyouranswers" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+          Continue</a>
+
+{% endblock %}

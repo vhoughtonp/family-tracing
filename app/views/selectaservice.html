@@ -1,3 +1,6 @@
+
+
+
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
@@ -8,14 +11,14 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <a href="/referrer/whoweare" class="govuk-back-link">Back</a>
-    <form class="form" action="/referrer/findingfamily" method="post">
+<a href="/index" class="govuk-back-link">Back</a>
+    <form class="form" action="/whoweare.html" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
-              What help are you looking for today?
+              What do you need help with today?
             </h1>
           </legend>
           <span id="sign-in-hint" class="govuk-hint">
@@ -44,14 +47,17 @@ Help finding family where contact has been lost.            </div>
                 Sending a message to hard to reach relatives
               </label>
               <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-Help sending a message to someone in a hard to reach place, such as a detention.              </span>
+Help sending a message to someone in a hard to reach place, such as a detention centre or camp.              </span>
 
             </div>
           </div>
         </fieldset>
       </div>
-      <a href="/referrer/findingfamily" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
-      Continue</a>
+    </div>
+
+          </div>
+        </fieldset>
+              <button class="govuk-button" data-module="govuk-button">Continue</button>
 
     </form>
 

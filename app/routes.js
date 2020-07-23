@@ -87,7 +87,7 @@ router.post('/relationship', function (req, res) {
 
 
 // SELECT A SERVICE ROUTING
-router.post('/criteria.html', function (req, res) {
+router.post('/whoweare.html', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -99,7 +99,7 @@ router.post('/criteria.html', function (req, res) {
   } else if (select_a_service === 'send_a_message') {
       res.redirect('/result_sendamessage.html')
   } else {
-    res.redirect('/criteria.html')
+    res.redirect('/whoweare.html')
   }
 })
 
